@@ -1,0 +1,59 @@
+[12:25:48] USER INPUT : add Inna +380631018187
+[12:25:48] BOT RESULT : 
+Added contact Name: Inna, Phone:+380631018187, Birthday:
+
+[12:26:47] USER INPUT : add Inna +380631018187
+[12:26:47] BOT RESULT : 
+Added contact Name: Inna, Phone:+380631018187, Birthday:
+
+[12:26:47] Addressbook has been saved!
+[12:26:59] USER INPUT : show-all
+[12:26:59] BOT RESULT : 
+===================================================
+| No. |Name        |     Phone     |   Birthday   |
+===================================================
+|  1  |Inna        | +380631018187 |              |
+===================================================
+
+
+[12:26:59] Addressbook has been saved!
+[12:29:05] USER INPUT : show-all
+[12:29:05] BOT RESULT : 
+===================================================
+| No. |Name        |     Phone     |   Birthday   |
+===================================================
+===================================================
+
+
+[12:29:05] Addressbook has been saved!
+[12:33:23] Addressbook has been loaded!
+[12:33:35] USER INPUT : add Andy +380674169297
+[12:33:35] BOT RESULT : 
+Added contact Name: Andy, Phone:+380674169297, Birthday:
+
+[12:33:35] Addressbook has been saved!
+[12:33:35] Addressbook has been loaded!
+[12:33:39] USER INPUT : show-all
+[12:33:39] BOT RESULT : 
+===================================================
+| No. |Name        |     Phone     |   Birthday   |
+===================================================
+|  1  |Andy        | +380674169297 |              |
+===================================================
+
+
+[12:33:39] Addressbook has been saved!
+[12:33:39] Addressbook has been loaded!
+[12:33:46] USER INPUT : exit
+[12:33:52] Addressbook has been loaded!
+[12:33:57] USER INPUT : show-all
+[12:33:57] BOT RESULT : 
+===================================================
+| No. |Name        |     Phone     |   Birthday   |
+===================================================
+|  1  |Andy        | +380674169297 |              |
+===================================================
+
+
+[12:33:57] Addressbook has been saved!
+[12:33:57] Addressbook has been loaded!

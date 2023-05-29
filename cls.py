@@ -1,6 +1,7 @@
 from typing import Any
 from collections import UserList
 from datetime import datetime
+import pickle
 import re
 
 
@@ -102,6 +103,7 @@ class AddressBook(UserList):
         self.data: list[Record] = []
         self.current_value = 0
         self.step = 0
+        self.file_name_save = 'save.bin'
 
     def __getitem__(self, index):
         return self.data[index]
@@ -213,13 +215,26 @@ class AddressBook(UserList):
         return result_tbl
 
     def autosave(self):
-        pass
+        with open(self.file_name_save, 'wb') as file:
+            pickle.dump(self.data, file)
+        self.log("Addressbook has been saved!")
 
     def load(self):
-        pass
+        with open(self.file_name_save, 'rb') as file:
+            self.data = pickle.load(file)
+        self.log("Addressbook has been loaded!")
+        return self.data
 
-    def log(self):
-        pass
+    def log(self, log_message: str, prefix: str | None = None):
+        current_time = datetime.strftime(datetime.now(), '%H:%M:%S')
+        if prefix == 'com':
+            message = f'[{current_time}] USER INPUT : {log_message}'
+        elif prefix == 'res':
+            message = f'[{current_time}] BOT RESULT : \n{log_message}\n'
+        elif prefix == None:
+            message = f'[{current_time}] {log_message}'
+        with open('logs.txt', 'a') as file:
+            file.write(f'{message}\n')
 
 
 if __name__ == "__main__":

@@ -53,8 +53,8 @@ class Bot:
         return {
             'add': self.adressbook.create_and_add_record,  # додавання запису
             'change': self.adressbook.change_handler,      # зміна телефону
+            'show-all': self.adressbook.show_all_handler,  # показати всі записи
             'show': self.adressbook.show_n_handler,        # показати N-кількість записів
-            'show all': self.adressbook.show_all_handler,  # показати всі записи
             'phone': self.adressbook.phone_handler,        # показати телефон
             'search': self.adressbook.search               # пошук по телефону або імені
         }
@@ -62,8 +62,9 @@ class Bot:
     def run(self):
         while True:
             # example: add Petro +380991234567
-
+            self.adressbook.load()
             user_input = input('Please enter command and args: ')
+            self.adressbook.log(user_input, prefix='com')
             handler, *data = self.parse_input(user_input)
             try:
                 result = handler(*data)
@@ -71,6 +72,8 @@ class Bot:
                     print('Good bye!')
                     break
                 print(result)
+                self.adressbook.log(result, prefix='res')
+                self.adressbook.autosave()
             except (ValueError, IndexError, TypeError) as exp:
                 print(exp)
                 continue
