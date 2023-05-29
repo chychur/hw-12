@@ -57,3 +57,8 @@ Added contact Name: Andy, Phone:+380674169297, Birthday:
 
 [12:33:57] Addressbook has been saved!
 [12:33:57] Addressbook has been loaded!
+[22:02:05] Addressbook has been loaded!
+[22:03:14] Addressbook has been loaded!
+[22:03:28] USER INPUT : show-all
+[22:06:10] Addressbook has been loaded!
+[22:06:14] USER INPUT : show-all

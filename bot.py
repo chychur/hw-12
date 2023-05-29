@@ -52,6 +52,7 @@ class Bot:
     def get_book_handlers(self):
         return {
             'add': self.adressbook.create_and_add_record,  # додавання запису
+            'add-phone': self.adressbook.add_phone_handler,
             'change': self.adressbook.change_handler,      # зміна телефону
             'show-all': self.adressbook.show_all_handler,  # показати всі записи
             'show': self.adressbook.show_n_handler,        # показати N-кількість записів

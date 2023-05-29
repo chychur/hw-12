@@ -73,9 +73,8 @@ class Record:
 
     def __init__(self, name: Name, phone: Phone | None = None, birthday: Birthday | None = None):
         self.name = name
-        self.phones = []
-        self.birthday = birthday
         self.phone = phone
+        self.birthday = birthday
 
     def days_to_birthday(self):
         if not self.birthday:
@@ -95,7 +94,7 @@ class Record:
     def record(self):
         return {
             'name': self.name.value,
-            'phone': self.phones.append(self.phone.value) if self.phone else 'Empty',
+            'phone': self.phone.value if self.phone else 'Empty',
             'birthday': self.birthday.value if self.birthday else 'Empty'
         }
 
@@ -122,17 +121,6 @@ class AddressBook(UserList):
 
     def add_record_handler(self, record: Record):
         self.data.append(record)
-
-    def add_phone_handler(self, name, phone: str):
-        for record in self.data:
-            if record['name'] == name:
-                if len(record['phone']) > 0:
-                    for ph in record['phone']:
-                        if ph == phone:
-                            raise ValueError(
-                                'This phone is already in Adressbook')
-                        else:
-                            record['phone'].
 
     def change_handler(self, name: str, phone: str):  # зміна телефону
         old_phone = 'Empty'
