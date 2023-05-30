@@ -43,21 +43,22 @@ class Bot:
 
     def get_bot_handlers(self):
         return {
-            'help': self.hello_handler,                    # привітання
-            'exit': self.exit_handler,                     # вихід
-            'goodbye': self.exit_handler,                  # вихід
-            'close': self.exit_handler                     # вихід
+            'help': self.hello_handler,                      # привітання
+            'exit': self.exit_handler,                       # вихід
+            'goodbye': self.exit_handler,                    # вихід
+            'close': self.exit_handler                       # вихід
         }
 
     def get_book_handlers(self):
         return {
-            'add': self.adressbook.create_and_add_record,  # додавання запису
-            'add-phone': self.adressbook.add_phone_handler,
-            'change': self.adressbook.change_handler,      # зміна телефону
-            'show-all': self.adressbook.show_all_handler,  # показати всі записи
-            'show': self.adressbook.show_n_handler,        # показати N-кількість записів
-            'phone': self.adressbook.phone_handler,        # показати телефон
-            'search': self.adressbook.search               # пошук по телефону або імені
+            'add': self.adressbook.create_and_add_record,    # додавання запису
+            'add-phone': self.adressbook.add_phone_handler,  # додавання телефону
+            'del-phone': self.adressbook.del_phone_handler,  # видалення телефону
+            'change': self.adressbook.change_handler,        # зміна телефону
+            'show-all': self.adressbook.show_all_handler,    # показати всі записи
+            'show': self.adressbook.show_n_handler,          # показати N-кількість записів
+            'phone': self.adressbook.phone_handler,          # показати телефон
+            'search': self.adressbook.search                 # пошук по телефону або імені
         }
 
     def run(self):

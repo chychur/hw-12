@@ -62,3 +62,43 @@ Added contact Name: Andy, Phone:+380674169297, Birthday:
 [22:03:28] USER INPUT : show-all
 [22:06:10] Addressbook has been loaded!
 [22:06:14] USER INPUT : show-all
+[22:17:12] Addressbook has been loaded!
+[22:17:17] USER INPUT : show-all
+[22:34:18] Addressbook has been loaded!
+[22:34:23] USER INPUT : show-all
+[22:37:48] Addressbook has been loaded!
+[22:37:53] USER INPUT : show-all
+[15:41:05] Addressbook has been loaded!
+[15:41:08] USER INPUT : hello
+[15:41:08] BOT RESULT : 
+hello not persist
+
+[15:41:08] Addressbook has been saved!
+[15:41:08] Addressbook has been loaded!
+[15:41:14] USER INPUT : help
+[15:41:14] BOT RESULT : 
+How can I help you?
+ Available command:
+add
+add-phone
+change
+show-all
+show
+phone
+searchadd
+add-phone
+change
+show-all
+show
+phone
+search
+
+[15:41:14] Addressbook has been saved!
+[15:41:14] Addressbook has been loaded!
+[15:41:28] USER INPUT : show Andy
+[15:41:28] Addressbook has been loaded!
+[15:41:39] USER INPUT : show Inna
+[15:41:39] Addressbook has been loaded!
+[15:41:48] USER INPUT : show-all
+[16:25:16] Addressbook has been loaded!
+[16:25:21] USER INPUT : show-all
