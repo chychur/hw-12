@@ -162,3 +162,104 @@ hello not persist
 [21:49:29] Addressbook has been loaded!
 [21:49:47] Addressbook has been loaded!
 [21:49:53] USER INPUT : show-all
+[22:17:44] USER INPUT : help
+[22:17:44] BOT RESULT : 
+How can I help you?
+ Available command:
+add
+add-phone
+del-phone
+change
+show-all
+show
+phone
+searchadd
+add-phone
+del-phone
+change
+show-all
+show
+phone
+search
+
+[22:17:44] Addressbook has been saved!
+[22:17:48] USER INPUT : show-all
+[22:17:48] BOT RESULT : 
+===================================================
+| No. |Name        |   Phone(s)    |   Birthday   |
+===================================================
+===================================================
+
+
+[22:17:48] Addressbook has been saved!
+[22:18:08] USER INPUT : add Andy +380674169297
+[22:18:08] BOT RESULT : 
+Added contact Name: Andy, Phone:+380674169297
+, Birthday:
+
+[22:18:08] Addressbook has been saved!
+[22:18:57] USER INPUT : show-all
+[22:18:57] BOT RESULT : 
+===================================================
+| No. |Name        |   Phone(s)    |   Birthday   |
+===================================================
+===================================================
+
+
+[22:18:57] Addressbook has been saved!
+[22:19:11] Addressbook has been loaded!
+[22:19:15] USER INPUT : show-all
+[22:19:15] BOT RESULT : 
+===================================================
+| No. |Name        |   Phone(s)    |   Birthday   |
+===================================================
+===================================================
+
+
+[22:19:15] Addressbook has been saved!
+[22:19:15] Addressbook has been loaded!
+[22:19:29] USER INPUT : add Andy +3806744169297
+[22:19:29] !!! === ERROR MESSAGE === !!! Incorrect phone number format! Please provide correct phone number format.
+
+[22:19:29] Addressbook has been loaded!
+[22:19:38] USER INPUT : show-all
+[22:19:38] BOT RESULT : 
+===================================================
+| No. |Name        |   Phone(s)    |   Birthday   |
+===================================================
+===================================================
+
+
+[22:19:38] Addressbook has been saved!
+[22:19:38] Addressbook has been loaded!
+[22:19:50] USER INPUT : add Andy +380674169297
+[22:19:50] BOT RESULT : 
+Added contact Name: Andy, Phone:+380674169297, Birthday:
+
+[22:19:50] Addressbook has been saved!
+[22:19:50] Addressbook has been loaded!
+[22:20:36] USER INPUT : add Alex +380631423567
+[22:20:36] BOT RESULT : 
+Added contact Name: Alex, Phone:+380631423567, Birthday:
+
+[22:20:36] Addressbook has been saved!
+[22:20:36] Addressbook has been loaded!
+[22:21:21] USER INPUT : add Tina +380934568123
+[22:21:21] BOT RESULT : 
+Added contact Name: Tina, Phone:+380934568123, Birthday:
+
+[22:21:21] Addressbook has been saved!
+[22:21:21] Addressbook has been loaded!
+[22:21:25] USER INPUT : show-all
+[22:21:25] BOT RESULT : 
+===================================================
+| No. |Name        |   Phone(s)    |   Birthday   |
+===================================================
+|  1  |Andy        | +380674169297 |              |
+|  2  |Alex        | +380631423567 |              |
+|  3  |Tina        | +380934568123 |              |
+===================================================
+
+
+[22:21:25] Addressbook has been saved!
+[22:21:25] Addressbook has been loaded!
