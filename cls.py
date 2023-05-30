@@ -51,6 +51,9 @@ class Phone(Field):
             return self.value == other.value
         return self.value == other
 
+    def __hash__(self):
+        return hash(self.value)
+
 
 class Birthday(Field):
     def __init__(self, value) -> None:
@@ -71,11 +74,12 @@ class Birthday(Field):
 
 class Record:
 
-    def __init__(self, name: Name, phones: set[Phone] | None = None, birthday: Birthday | None = None):
+    def __init__(self, name: Name, phone: Phone | None = None, birthday: Birthday | None = None):
         self.name = name
-        # self.phone = phone
+
         self.birthday = birthday
-        self.phones: set[Phone] = set()
+        self.phones = set()
+        self.add_phone(phone)
 
     def days_to_birthday(self):
         if not self.birthday:
@@ -86,16 +90,27 @@ class Record:
         return (self.birthday.value.replace(year=now.year) + 1).days
 
     def __repr__(self) -> str:
-        return f'Record (Name:"{self.name}", Phone:"{self.phones}", Birthday:"{self.birthday}")'
+        return f'Record (Name:"{self.name}", Phone:"{self.show_phones()}", Birthday:"{self.birthday}")'
 
     def __str__(self) -> str:
-        return f'Name: {self.name}, Phone:{self.phones or "Empty"}, Birthday:{self.birthday or "Empty"}'
+        return f'Name: {self.name}, Phone:{self.show_phones()}, Birthday:{self.birthday or "Empty"}'
+
+    def add_phone(self, phone):
+        if isinstance(phone, str):
+            phone = Phone(phone)
+        self.phones.add(phone)
+
+    def show_phones(self):
+        if self.phones:
+            list_phones = [str(p) for p in self.phones]
+            return ", ".join(list_phones)
+        return 'Empty'
 
     @property
     def record(self):
         return {
             'name': self.name.value,
-            'phones': self.phones.add(Phone(phone)),
+            'phones': self.show_phones(),
             'birthday': self.birthday.value if self.birthday else 'Empty'
         }
 
@@ -115,7 +130,7 @@ class AddressBook(UserList):
         return self.data[index]
 
     def create_and_add_record(self, name, phone: str, birthday: str | None = None):
-        record = Record(Name(name), set(Phone(phone)), Birthday(birthday))
+        record = Record(Name(name), Phone(phone), Birthday(birthday))
         self.add_record_handler(record)
 
         return f"Added contact {record}"
@@ -165,7 +180,7 @@ class AddressBook(UserList):
         for record in self.data:
             counter += 1
             result += '|{:^5}|{:<12}|{:^15}|{:^14}|\n'.format(
-                counter, record.name.value, record.phones, record.birthday.value)
+                counter, record.name.value, record.show_phones(), record.birthday.value if record.birthday else 'Empty')
         counter = 0
         result_tbl = header + result + foter
         return result_tbl
@@ -184,7 +199,7 @@ class AddressBook(UserList):
                 for record in self.data[self.step:self.step+n]:
                     self.step += 1
                     result += '|{:^5}|{:<12}|{:^15}|{:^14}|\n'.format(
-                        self.step, record.name.value, record.phones, record.birthday.value)
+                        self.step, record.name.value, record.show_phones(), record.birthday.value if record.birthday else 'Empty')
 
                 result_tbl = header + result + foter
                 return result_tbl
@@ -248,6 +263,8 @@ class AddressBook(UserList):
             message = f'[{current_time}] USER INPUT : {log_message}'
         elif prefix == 'res':
             message = f'[{current_time}] BOT RESULT : \n{log_message}\n'
+        elif prefix == 'err':
+            message = f'[{current_time}] !!! === ERROR MESSAGE === !!! {log_message}\n'
         elif prefix == None:
             message = f'[{current_time}] {log_message}'
         with open('logs.txt', 'a') as file:
@@ -259,7 +276,7 @@ if __name__ == "__main__":
     n1 = Name('Andy')
     p1 = Phone('+380674169297')
     record1 = Record(n1, p1)
-
+    print(record1)
     USERS.add_record_handler(record1)
 
     n2 = Name('Alex')
@@ -279,6 +296,10 @@ if __name__ == "__main__":
 
     print(USERS.show_n_handler(1))
     print(USERS.show_n_handler(1))
+
+    USERS.add_phone_handler('Andy', '+380674169298')
+
+    print(USERS.show_all_handler())
 
     # for item in USERS:
     #     print(item)

@@ -102,3 +102,63 @@ search
 [15:41:48] USER INPUT : show-all
 [16:25:16] Addressbook has been loaded!
 [16:25:21] USER INPUT : show-all
+[16:29:43] Addressbook has been loaded!
+[16:29:48] USER INPUT : show Andy
+[16:29:48] Addressbook has been loaded!
+[16:30:07] USER INPUT : show 1
+[16:44:26] Addressbook has been loaded!
+[16:44:30] USER INPUT : show-all
+[16:48:43] Addressbook has been loaded!
+[16:48:48] USER INPUT : show-all
+[16:49:05] Addressbook has been loaded!
+[16:49:11] USER INPUT : search And
+[20:15:07] Addressbook has been loaded!
+[20:15:22] USER INPUT : show-all
+[20:31:40] Addressbook has been loaded!
+[20:31:45] USER INPUT : show-all
+[20:33:19] Addressbook has been loaded!
+[20:33:30] USER INPUT : show 1
+[20:39:49] Addressbook has been loaded!
+[20:39:54] USER INPUT : show-all
+[20:46:10] Addressbook has been loaded!
+[20:46:16] USER INPUT : show-all
+[20:46:16] Addressbook has been loaded!
+[20:46:51] USER INPUT : show 1
+[20:46:51] Addressbook has been loaded!
+[20:46:58] USER INPUT : search Andy
+[20:46:58] Addressbook has been loaded!
+[20:48:13] Addressbook has been loaded!
+[20:48:18] USER INPUT : show-all
+[20:48:37] Addressbook has been loaded!
+[20:48:41] USER INPUT : show-all
+[20:48:41] BOT RESULT : 
+'Record' object has no attribute 'phones'
+
+[20:48:41] Addressbook has been loaded!
+[20:51:36] Addressbook has been loaded!
+[20:51:40] USER INPUT : hello
+[20:51:40] BOT RESULT : 
+hello not persist
+
+[20:51:40] Addressbook has been saved!
+[20:51:40] Addressbook has been loaded!
+[20:52:26] USER INPUT : show-all
+[20:52:26] !!! === ERROR MESSAGE === !!! 'Record' object has no attribute 'phones'
+
+[20:52:26] Addressbook has been loaded!
+[21:39:13] Addressbook has been loaded!
+[21:39:25] USER INPUT : show-all
+[21:39:25] !!! === ERROR MESSAGE === !!! 'Record' object has no attribute 'phones'
+
+[21:39:25] Addressbook has been loaded!
+[21:39:35] USER INPUT : show 1
+[21:39:35] !!! === ERROR MESSAGE === !!! 'Record' object has no attribute 'phones'
+
+[21:39:35] Addressbook has been loaded!
+[21:49:23] Addressbook has been loaded!
+[21:49:29] USER INPUT : show-all
+[21:49:29] !!! === ERROR MESSAGE === !!! 'Record' object has no attribute 'phones'
+
+[21:49:29] Addressbook has been loaded!
+[21:49:47] Addressbook has been loaded!
+[21:49:53] USER INPUT : show-all

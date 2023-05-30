@@ -78,6 +78,7 @@ class Bot:
                 self.adressbook.autosave()
             except (ValueError, IndexError, TypeError) as exp:
                 print(exp)
+                self.adressbook.log(exp, prefix='err')
                 continue
 
 
